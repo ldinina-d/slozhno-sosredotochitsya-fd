@@ -7,8 +7,7 @@
   background-attachment: fixed;
   min-height: 100vh;
   color: var(--accent-color);
-  font-family: var(--main-font);
-  height: 668px;
+  font-family: var(--main-font), sans-serif;
 }
 
 .rec-decorator {
@@ -24,8 +23,6 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
-  min-width: 52px;
-  min-height: 26px;
 }
 
 .rec-decorator::after {
@@ -48,7 +45,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  border: 2px solid var(--color-section);
+  border: 1px solid var(--color-section);
 }
 
 .decorated-zone::before {
@@ -74,6 +71,12 @@
   min-height: 668px;
   position: relative;
   padding: 75px 10px 66px 10px;
+}
+
+.header__description-container {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
 }
 
 .header__description {
@@ -110,7 +113,6 @@
   margin: 0;
   padding: 0;
   min-width: 70px;
-  min-height: 98px;
 }
 
 .header__theme-menu-button {
@@ -146,7 +148,7 @@
 .content__link {
   text-decoration: none;
   color: var(--color-text);
-  text-shadow: 2px 2px 0 #ff0070;
+  text-shadow: 2px 2px 0 var(--color-shadow);
 }
 
 .content__link:hover {
@@ -181,6 +183,10 @@
   padding-left: 0;
 }
 
+.section-advice {
+  min-width: 355px;
+}
+
 .content__section-title {
   color: var(--color-section);
   font-family: "IBM Plex Mono", monospace;
@@ -188,7 +194,8 @@
   font-weight: 700;
   line-height: 23.4px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  max-width: 300px;
 }
 
 .content__card-title {
@@ -203,14 +210,17 @@
 
 .gallery__title {
   margin-bottom: 10px;
+  margin-top: -5px;
 }
 
-.adviсe__title {
+.advice__title {
   padding: 2px 0;
-  margin-bottom: 13px;
+  margin-bottom: 20px;
 }
 
 .content__section-subtitle {
+  padding-top: 0;
+  padding-bottom: 0;
   color: #000028;
   background-color: var(--highlightColor);
   font-family: "IBM Plex Mono", monospace;
@@ -281,29 +291,31 @@
   }
 
   .header {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 100vh;
     min-height: 1024px;
-    align-items: center;
     padding: 192px 20px 183px 0;
   }
 
   .header__title {
-    grid-row: 2;
     grid-column: -1/1;
+    font-size: 120px;
   }
 
   .header__theme-menu {
-    grid-row: 1;
     grid-column: 2;
   }
 
+  .header__description-container {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: end;
+    align-self: end;
+  }
   .header__description {
     grid-row: 3;
-    min-width: 364px;
-    min-height: 117px;
+    max-width: 364px;
+    max-height: 117px;
     grid-column: 2;
     justify-self: end;
   }
@@ -312,13 +324,18 @@
     padding-top: 0;
   }
 
+  .section-advice {
+  min-width: 236px;
+}
+
   .gallery__title {
-    margin-bottom: 10px;
+    margin-bottom: 22px;
+    margin-top: 0;
   }
 
-  .adviсe__title {
+  .advice__title {
     padding: 2px 0;
-    margin-bottom: 13px;
+    margin-bottom: 17px;
   }
 
   .content__section {
@@ -329,6 +346,10 @@
     margin-bottom: 60px;
     padding-top: 0;
     padding: 0 20px 0 20px;
+  }
+
+  .content__section-title {
+    max-width: 210px;
   }
 
   .reasons__section .content__section-list {
@@ -354,6 +375,7 @@
 
   .image__section {
     display: block;
+    margin-top: 60px;
   }
 
   .content__image_type_sunset {
@@ -380,11 +402,15 @@
     grid-row: 3 / 4;
     grid-column: 2 / 4;
   }
+
+  .footer__title {
+    font-size: 120px;
+    margin-top: 20px;
+  }
 }
 
 @media (width >= 1024px) {
   .header {
-    height: 100vh;
     min-height: 768px;
     padding: 20px 20px 134px 0;
   }
@@ -392,38 +418,40 @@
   .header__theme-menu {
     grid-column: 1 / -1;
     justify-self: center;
-    align-self: start;
+    margin-left: 20px;
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
     margin-left: 0;
   }
 
   .header__title {
     justify-self: end;
     align-self: end;
-    margin: 0;
-    padding: 0;
+    margin-top: 120px;
+    font-size: 157px;
   }
 
-  .transfer {
-    display: none;
+  .content__section-title {
+    max-width: 315px;
+  }
+
+  .header__description-container {
+    grid-row: 3;
+    grid-column: 2;
+    justify-self: end;
+    align-self: end;
   }
 
   .header__description {
-    grid-row: 3;
-    align-self: end;
-    justify-self: end;
-    min-width: 491px;
-    min-height: 71px;
+    max-width: 491px;
+    max-height: 71px;
   }
 
   .content__section {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 648.92px;
   }
 
   .why__section,
@@ -435,5 +463,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+
+  .footer__title {
+    font-size: 157px;
+    margin-top: 2px;
   }
 }
