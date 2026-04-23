@@ -83,7 +83,7 @@
   align-self: end;
   width: 100%;
   max-width: 355px;
-  background-color: var(--highlightColor);
+  background-color: var(--highlight-color);
   color: var(--color-heading);
   font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
@@ -200,7 +200,7 @@
 
 .content__card-title {
   color: var(--color-heading);
-  background-color: var(--highlightColor);
+  background-color: var(--highlight-color);
   font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   font-weight: 700;
@@ -210,7 +210,7 @@
 
 .gallery__title {
   margin-bottom: 10px;
-  margin-top: -5px;
+  margin-top: 0;
 }
 
 .advice__title {
@@ -222,7 +222,7 @@
   padding-top: 0;
   padding-bottom: 0;
   color: #000028;
-  background-color: var(--highlightColor);
+  background-color: var(--highlight-color);
   font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   font-weight: 400;
@@ -252,6 +252,10 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.content__section:has(+ .image__section) {
+  margin-bottom: 27px;
 }
 
 .footer {
@@ -299,7 +303,7 @@
 
   .header__title {
     grid-column: -1/1;
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__theme-menu {
@@ -325,8 +329,8 @@
   }
 
   .section-advice {
-  min-width: 236px;
-}
+    min-width: 236px;
+  }
 
   .gallery__title {
     margin-bottom: 22px;
@@ -404,8 +408,7 @@
   }
 
   .footer__title {
-    font-size: 120px;
-    margin-top: 20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -431,7 +434,6 @@
     justify-self: end;
     align-self: end;
     margin-top: 120px;
-    font-size: 157px;
   }
 
   .content__section-title {
@@ -447,7 +449,6 @@
 
   .header__description {
     max-width: 491px;
-    max-height: 71px;
   }
 
   .content__section {
@@ -466,7 +467,6 @@
   }
 
   .footer__title {
-    font-size: 157px;
     margin-top: 2px;
   }
 }

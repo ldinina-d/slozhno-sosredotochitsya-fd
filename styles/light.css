@@ -2,7 +2,7 @@
   --background-image: url("../images/cover-image-light.png");
   --background-color: #ffeef6;
   --accent-color: #ffc2e6;
-  --highlightColor: #ff8bcd;
+  --highlight-color: #ff8bcd;
   --main-font: "IBM Plex Mono", monospace;
   --color-heading: #353430;
   --color-text: #353430;
@@ -19,7 +19,7 @@
     --background-image: url("../images/cover-image-light.png");
     --background-color: #ffeef6;
     --accent-color: #ffc2e6;
-    --highlightColor: #ff8bcd;
+    --highlight-color: #ff8bcd;
     --main-font: "IBM Plex Mono", monospace;
     --color-heading: #353430;
     --color-text: #353430;
